@@ -1,0 +1,65 @@
+import java.util.*;
+class Node{
+    int data;
+    Node left,right;
+    
+    Node(int data){
+    this.data=data;
+    this.left=null;
+    this.right=null;
+    }
+}
+class BinaryTree{
+        Node root;
+        BinaryTree(int data){
+            root=new Node(data);
+        }
+        void insertLeft(Node root, int data){
+            root.left=new Node(data);
+        }
+        void insertRight(Node root, int data){
+            root.right=new Node(data);
+        }
+        
+        void inorder(Node root){
+            if(root==null){
+            return;
+            }
+            else{
+                inorder(root.left);
+                System.out.println(root.data+" ");
+                inorder(root.right);
+            } 
+    }
+    void preorder(Node root){
+            if(root==null){
+            return;
+            }
+            else{
+                
+                System.out.println(root.data+" ");
+                preorder(root.left);
+                preorder(root.right);
+            } 
+    }
+}
+public class Main{
+     public static void main(String[]args){
+            BinaryTree Tree = new BinaryTree(1);
+            
+            Tree.insertLeft(Tree.root,2);
+            Tree.insertRight(Tree.root,3);
+            Tree.insertLeft(Tree.root.left,4);
+            Tree.insertRight(Tree.root.left,5);
+             
+        
+     
+     System.out.println("inorder is:");
+     Tree.inorder(Tree.root);
+     System.out.println();
+      System.out.println("preorder is:");
+     Tree.preorder(Tree.root);
+     System.out.println();
+         }
+}
+    

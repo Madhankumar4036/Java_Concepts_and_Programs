@@ -1,0 +1,310 @@
+STRING METHODS:
+
+1.Concatenate
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "Hello";
+	String str2 ="World";
+	System.out.println(str1 + " " + str2);
+		
+	}
+}
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+2.Length()
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "Hello";
+	
+	int length = str1.length();
+	System.out.println("The length of the string is: " + length);
+	 	
+	}
+}
+
+_______________________________________________________________________________________________________________________________________________________________________________________
+
+3.CharAt method)
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "Hello World";
+	char ch = str1.charAt(2);
+	System.out.println(ch);
+	 	
+	}
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+4.Boolean
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "hello world";
+	String str2 = "HELLO WORLD";
+        System.out.println("Checking if the strings are equal: " + (str1.equals(str2)));
+ 
+	}
+}
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+5.Ignore Case
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "hello world";
+	String str2 = "HELLO WORLD";
+	System.out.println("Checking if the strings are equal and ignoring the cases: " + (str1.equalsIgnoreCase(str2)));
+ 
+	}
+}
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+6.UPPERCASE AND LOWER CASE
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "hello world";
+	String str2 = "HELLO WORLD";
+	String str3 = str1.toUpperCase();
+	String str4 = str2.toLowerCase();
+	System.out.println("Converting the strings into upper case: " + str3);
+	System.out.println("Converting the strings into lower case: " + str4);
+	
+	}
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+7.indexOf
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "hello world";
+	String str2 = "HELLO WORLD";
+	int ch = str1.indexOf('w');
+	System.out.println("index of the given alphabet is " + ch);
+
+	}
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+8.lastIndexOf
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "hello world";
+	String str2 = "HELLO WORLD";
+	int ch = str1.lastIndexOf('o');
+	System.out.println("last index of the given alphabet is " + ch);
+
+	}
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+9.startsWith and endsWith
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "hello world";
+	String str2 = "HELLO WORLD";
+	System.out.println("the word starts with " + str1.startsWith("hello"));
+	System.out.println("the word starts with " + str2.endsWith("WORLD"));
+
+	}
+}
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+10.matches
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "hello world";
+	String str2 = "HELLO WORLD";
+	System.out.println("check if the given arrays is matching  " + str1.matches(str2));
+	
+	}
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+11.substring
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = "hello world";
+	String str2 = "HELLO WORLD";
+	System.out.println("the substring of the given array is:  " + str1.substring(1,4));
+	
+	}
+}
+
+_______________________________________________________________________________________________________________________________________________________________________________________
+
+12.trim
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = " hello world ";
+	String str2 = "HELLO WORLD";
+	String str3 = str1.trim();
+	System.out.println("trimming the spaces:" + str3);
+	
+	}
+}
+
+__________________________________________________________________________________________________________________________________________________________________________________________
+
+13.valueOf
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str1 = " hello world ";
+	String str2 = "HELLO WORLD";
+	System.out.println("Value of the alphabet:" + str1.valueOf('w'));
+	
+	}
+}
+
+________________________________________________________________________________________________________________________________________________________________________________________
+
+14.Reverse a string
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str = "hello world";
+	String reversed = " ";
+    	for(int i=str.length()-1;i>=0;i--){
+        reversed += str.charAt(i);
+  	}
+	System.out.print("reversed string is:" + reversed);
+	
+	}
+}
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+15.Occurance of the Character in the string
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str = "Praveen";
+    	char ch='e';
+    	int count=0;
+    	for(int i=0;i<str.length();i++)
+    	{
+        if (str.charAt(i) == ch)
+        {
+            count++;
+        }
+    }
+	System.out.print("occurance if the Character in the string is:" + count);
+	
+	}
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+16.Does The string contains the alphabetic characters
+
+public class Main
+{
+	public static void main(String[] args) {
+	String str = "HelloWorld";
+	if(str.matches("[a-z A-Z]+")){
+        	System.out.print("The string contains the alphabetic characters");
+    	}
+	else
+	{
+		System.out.print("The string does not contain the alphabetic characters");
+	}
+	
+     }
+}
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+17.Convert character to a string
+
+public class Main
+{
+	public static void main(String[] args) {
+	char [] charArray ={'Z','E','N','I','T','H'};
+	String str = new String(charArray);
+	System.out.println("Conversion of charArray to string: " + str);
+   
+    }
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

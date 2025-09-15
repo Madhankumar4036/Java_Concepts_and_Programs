@@ -1,0 +1,40 @@
+import java.util.*;
+class Node {
+    int data;
+    Node left, right;
+
+    public Node(int value) {
+        data = value;
+        left = right = null;
+    }
+}
+
+class BSTLeafNodes {
+    static void printLeafNodes(Node root) {
+        if (root == null) return;
+        
+        if (root.left == null && root.right == null) {
+            System.out.print(root.data + " ");
+            return;
+        }
+
+        printLeafNodes(root.left);
+        printLeafNodes(root.right);
+    }
+
+    public static void main(String[] args) {
+        Node root = new Node(50);
+        root.left = new Node(30);
+        root.right = new Node(70);
+        root.left.left = new Node(20);
+        root.left.right = new Node(40);
+        root.right.left = new Node(60);
+        root.right.right = new Node(80);
+
+        System.out.print("Leaf Nodes: ");
+        printLeafNodes(root);
+    }
+}
+
+OUTPUT:
+Leaf Nodes:20 40 60 80.
